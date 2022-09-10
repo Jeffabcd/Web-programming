@@ -266,6 +266,17 @@ html,body{
         width:50%;
     }
 }
+@media screen and (max-width:400px)
+{
+    .google-meet__me-middle{
+        width:100px;
+        height:100px;
+    }
+    .google-meet__member-middle{
+        width:40px;
+        height:60px;
+    }
+}
 @media screen and (max-height:600px)
 {
     .google-meet__me-middle{
