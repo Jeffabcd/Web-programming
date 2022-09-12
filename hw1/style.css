@@ -57,6 +57,8 @@ html,body{
     top:0;
     left:100%;
     transform:translate(-100%,0);
+    /*background-image:url(quiet.png);
+    background-repeat:no-repeat;*/
    
     
 }
@@ -153,8 +155,8 @@ html,body{
     width:60%;
 }
 .google-meet__member-quiet{
-    width:25px;
-    height:25px;
+    width:30px;
+    height:30px;
     position:absolute;
     left:100%;
     top:2px;
@@ -227,6 +229,7 @@ html,body{
 .google-meet__sound input[type="checkbox"]:checked+label{
     background-image: url(allow_speak.png);
 }
+
 .sbutton{
     width:45px;
     height:45px;

@@ -9,7 +9,7 @@
         <div id="root" class="google-meet__root">
             <div id="main" class="google-meet__main">
                 <div class="google-meet__me">
-                    <img class="google-meet__me-quiet" src="quiet.png" alt="quiet.png">
+                    <img id="change1" class="google-meet__me-quiet" src="quiet.png" alt="quiet.png" >
                     <img class="google-meet__me-middle" src="me.jpg" alt="me.jpg"> 
                     <div class="google-meet__me-mbutton">
                         <img class="google-meet__me-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
@@ -56,7 +56,7 @@
                 <ul class="google-meet__FButtons">
                     <li>
                         <div class="google-meet__sound">
-                            <input id="12" type="checkbox" >
+                            <input id="12" type="checkbox" class=".google-meet__me-quiet" onclick="myFunction()">
                             <label for="12" title="麥克風"> </label>
                         </div>
                     </li>
@@ -75,5 +75,24 @@
                 </ul>
             </footer>
         </div>
+        <script>
+            function myFunction(){
+                var checkbox=document.getElementById("12");
+                var image1=document.getElementById("change1");
+                if(checkbox.checked==true)
+                {
+                    image1.src="speak.png";
+                    image1.style.width="30px";
+                    image1.style.height="30px";
+                    image1.style.top="10px";
+                }else{
+                    image1.src="quiet.png";
+                    image1.style.width="50px";
+                    image1.style.height="50px";
+                    image1.style.top="0";
+                   
+                }
+            }
+        </script>
     </body>
 </html>
