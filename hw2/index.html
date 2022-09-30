@@ -1,17 +1,21 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Google meet</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <script src="main.js"></script>
         <div id="root" class="google-meet__root">
             <div id="main" class="google-meet__main">
-                <div class="google-meet__me">
+                <div id="member_me" class="google-meet__me">
                     <img id="change1" class="google-meet__me-quiet" src="quiet.png" alt="quiet.png" >
+                    <img id="cancel_me" class="google-meet__me-cancel" src="cancel.png" alt="cancel.png">
                     <img class="google-meet__me-middle" src="me.jpg" alt="me.jpg"> 
-                    <div class="google-meet__me-mbutton">
+                    <div id="mbutton-me" class="google-meet__me-mbutton">
                         <img class="google-meet__me-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
                         <img class="google-meet__me-cblock" src="cancel_block.png" alt="cancel_block.png" title="取消區塊顯示">
                         <img class="google-meet__me-minimize" src="minimize.png" alt="minimize.png" title="畫面最小化">
@@ -19,45 +23,75 @@
                     
                     <div class="google-meet__me-lb">
                         <img class="google-meet__me-needle" src="needle.png" alt="needle.png">
-                        <div class="google-meet__me-name"><div class="google-meet__me-name-2">你</div></div>
+                        <div class="google-meet__me-name"><div id="myname" class="google-meet__me-name-2">你</div></div>
                     </div>
                 </div>>
 
-                <section class="google-meet__others">
-                    <div class="one google-meet__member">
+                <section id="members" class="google-meet__others">
+                    <div id="member_1" class="one google-meet__member">
                         <img class="google-meet__member-quiet" src="quiet-3.png" alt="quiet.png">
+                        <img id="cancel_1" class="google-meet__member-cancel" src="cancel.png" alt="cancel.png">
                         <img class="google-meet__member-middle" src="DingDing.jpg" alt="丁丁">
                         <h2 class="google-meet__member-name">丁丁</h2>
+                        <div class="google-meet__member-mbutton">
+                            <img class="google-meet__member-cneedle" src="border-needle.png" alt="cancel_needle.png" title="訂選">
+                            <img class="google-meet__member-cblock" src="quiet-4.png" alt="cancel_block.png" title="無法將其他人靜音">
+                            <img class="google-meet__member-minimize" src="stop.png" alt="minimize.png" title="我不知道這是幹嘛用的">
+                        </div>  
                     </div>
-                    <div class="two google-meet__member">
+                    <div id="member_2" class="two google-meet__member">
                         <img class="google-meet__member-middle" src="Dexi.jpg" alt="迪西">
+                        <img id="cancel_2" class="google-meet__member-cancel" src="cancel.png" alt="cancel.png">
                         <img class="google-meet__member-quiet" src="quiet-3.png" alt="quiet.png">
                         <h2 class="google-meet__member-name">迪西</h2>
+                        <div class="google-meet__member-mbutton">
+                            <img class="google-meet__member-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
+                            <img class="google-meet__member-cblock" src="cancel_block.png" alt="cancel_block.png" title="取消區塊顯示">
+                            <img class="google-meet__member-minimize" src="minimize.png" alt="minimize.png" title="畫面最小化">
+                        </div> 
                     </div>
-                    <div class="three google-meet__member">
+                    <div id="member_3" class="three google-meet__member">
                         <img class="google-meet__member-middle" src="Lala.jpg" alt="拉拉">
+                        <img id="cancel_3" class="google-meet__member-cancel" src="cancel.png" alt="cancel.png">
                         <img class="google-meet__member-quiet" src="quiet-3.png" alt="quiet.png">
                         <h2 class="google-meet__member-name">拉拉</h2>
+                        <div class="google-meet__member-mbutton">
+                            <img class="google-meet__member-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
+                            <img class="google-meet__member-cblock" src="cancel_block.png" alt="cancel_block.png" title="取消區塊顯示">
+                            <img class="google-meet__member-minimize" src="minimize.png" alt="minimize.png" title="畫面最小化">
+                        </div> 
                     </div>
-                    <div class="four google-meet__member">
+                    <div id="member_4" class="four google-meet__member">
                         <img class="google-meet__member-middle" src="Xiauboe.jpg" alt="小波">
+                        <img id="cancel_4" class="google-meet__member-cancel" src="cancel.png" alt="cancel.png">
                         <img class="google-meet__member-quiet" src="quiet-3.png" alt="quiet.png">
                         <h2 class="google-meet__member-name">小波</h2>
+                        <div class="google-meet__member-mbutton">
+                            <img class="google-meet__member-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
+                            <img class="google-meet__member-cblock" src="cancel_block.png" alt="cancel_block.png" title="取消區塊顯示">
+                            <img class="google-meet__member-minimize" src="minimize.png" alt="minimize.png" title="畫面最小化">
+                        </div> 
                     </div>
-                    <div class="five google-meet__member">
+                    <div id="member_5" class="five google-meet__member">
                         <img class="google-meet__member-middle" src="Sun.png" alt="太陽">
+                        <img id="cancel_5" class="google-meet__member-cancel" src="cancel.png" alt="cancel.png">
                         <img class="google-meet__member-quiet" src="quiet-3.png" alt="quiet.png">
                         <h2 class="google-meet__member-name">太陽</h2>
+                        <div class="google-meet__member-mbutton">
+                            <img class="google-meet__member-cneedle" src="cancel_needle.png" alt="cancel_needle.png" title="取消訂選畫面">
+                            <img class="google-meet__member-cblock" src="cancel_block.png" alt="cancel_block.png" title="取消區塊顯示">
+                            <img class="google-meet__member-minimize" src="minimize.png" alt="minimize.png" title="畫面最小化">
+                        </div> 
                     </div>
                 </section>
             </div>
             <footer class="google-meet__footer">
-                <h2 class="google-meet__detail">凌晨4:42  |  Web Programming </h1>
+                <h2 id="detail" class="google-meet__detail"> </h1>
                 <ul class="google-meet__FButtons">
                     <li>
                         <div class="google-meet__sound">
-                            <input id="12" type="checkbox" class=".google-meet__me-quiet" onclick="myFunction()">
-                            <label for="12" title="麥克風"> </label>
+                            <input id="change_sound" type="checkbox" class=".google-meet__me-quiet" >
+                            <label for="change_sound" title="麥克風"> </label>
                         </div>
                     </li>
                     <li><img class="google-meet__camera sbutton" src="camera.png" alt="camera" title="開啟攝影機"></li>
@@ -65,6 +99,7 @@
                     <li><img class="google-meet__share sbutton" src="share.png" alt="share" title="分享螢幕畫面"></li>
                     <li><img class="google-meet__function sbutton" src="function.png" alt="function" title="更多選項"></li>
                     <li><img class="google-meet__hangup sbutton" src="hang_up.png" alt="hang_up" title="退出通話"></li>
+                    <li><img id="plus_button" class="google-meet__plus sbutton" src="plus.png" alt="plus" title="增加會議成員"></li>
                 </ul>
                 <ul class="google-meet__information">
                     <li><img class="google-meet__info" src="information.png" alt="information.png" title="會議詳細資料"></li>
@@ -75,10 +110,10 @@
                 </ul>
             </footer>
         </div>
-        <!--
-        <script>
+        
+        <!--<script>
             function myFunction(){
-                var checkbox=document.getElementById("12");
+                var checkbox=document.getElementById("change_sound");
                 var image1=document.getElementById("change1");
                 if(checkbox.checked==true)
                 {
@@ -95,6 +130,8 @@
                 }
             }
         </script>
-    -->
+        -->
+    
     </body>
 </html>
+

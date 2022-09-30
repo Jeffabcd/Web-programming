@@ -1,0 +1,358 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    font: 14px 'Helvetica Neue',Helvetica ,Arial,sans-serif;
+    background-color:rgb(32, 33, 37);
+    overflow: auto;
+}
+.google-meet__root{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background-color:inherit;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+   
+}
+.google-meet__main{
+    margin:0;
+    width:100%;
+    height:90%;
+    margin-bottom:1em;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+  /*  border:1px solid white;*/
+    
+}
+.google-meet__me{
+    position:relative;
+    width:70%;
+    height:100%;
+    float: left;
+ /*   border: 1px solid white; */
+    
+}
+.google-meet__me-middle{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+    border-radius: 50%;
+}
+.google-meet__me-cancel{
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:10px;
+    left:10px;
+    border-radius:50%;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+.google-meet__me-cancel:hover{
+    width:32px;
+    height:32px;
+}
+.google-meet__me-quiet{
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:0;
+    left:100%;
+    transform:translate(-100%,0);
+    /*background-image:url(quiet.png);
+    background-repeat:no-repeat;*/
+    transition: all 0.05s ease;
+    
+}
+.google-meet__me-lb{
+    width:120px;
+    height:40px;
+    position: absolute;
+    top:100%;
+    left:0;
+    transform:translate(0,-100%);
+    background-color:inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+}
+.google-meet__me-needle{
+    width:33%;
+    height:100%;
+}
+.google-meet__me-name{
+    width:60%;
+    height:100%;
+   
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+}
+.google-meet__me-name-2{
+    position:relative;
+    right:15px;
+    color:white;
+    font-size:130%;
+    font-weight: 500;
+}
+.google-meet__me-mbutton{
+   display: none;
+   transition:all 0.5s ease;
+}
+.google-meet__me:hover .google-meet__me-mbutton{
+    width:125px;
+    height:50px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    background-color:rgb(32,33,36);
+    transform:translate(-50%,-50%);
+    border-radius:40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index:1;
+    opacity:0.5;
+}
+.google-meet__me:hover .google-meet__me-mbutton:hover{
+    opacity:0.8;
+}
+.google-meet__me-mbutton>img{
+    width:25%;
+    height:70%;
+    cursor:pointer;
+}
+.google-meet__member-mbutton{
+    display:none;
+    transition: all 0.5s ease;
+}
+.google-meet__member:hover .google-meet__member-mbutton{
+    width:70%;
+    max-width:150px;
+    height:40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(32,33,36);
+    border-radius:40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    z-index:2;
+    opacity:0.5;
+}
+.google-meet__member .google-meet__member-mbutton:hover{
+    opacity:0.8;
+}
+.google-meet__member-mbutton>img{
+    width:25%;
+    height:70%;
+    cursor:pointer;
+}
+.google-meet__others{
+    width:30%;
+    height:100%;
+    float:right;
+    padding:1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-content:flex-start;
+    flex-wrap:wrap;
+}
+
+.google-meet__member{
+    position:relative;
+    width:47%;
+    height:30%;
+    margin:0.1em;
+    margin-top:0.5em;
+    padding:0.1em;
+    background-color: rgb(60,64,67);
+    border-radius: 8%;
+}
+.google-meet__member-middle{
+    width:70px;
+    height:70px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:50%;
+}
+/*
+.five{
+    width:60%;
+}
+*/
+.google-meet__member-quiet{
+    width:30px;
+    height:30px;
+    position:absolute;
+    left:100%;
+    top:2px;
+    transform:translate(-120%,0);
+    border-radius:50%;
+    opacity: 0.8;
+}
+.google-meet__member-name{
+    width:60px;
+    height:25px;
+    position:absolute;
+    top:100%;
+    left:9%;
+    transform: translate(0,-170%);
+    color:white;
+    font-size:100%;
+    font-weight:500;
+}
+.google-meet__member-cancel{
+    width:25px;
+    height:25px;
+    position:absolute;
+    left:4px;
+    top:3px;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    
+}
+.google-meet__member-cancel:hover{
+    width:27px;
+    height:27px;
+}
+.google-meet__footer{
+    width:98%;
+    height:10%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+    
+}
+.google-meet__detail{
+    font-size:120%;
+    color:white;
+    font-weight:700;
+}
+.google-meet__FButtons{
+    width:320px;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    list-style:none;
+    padding:0;
+    margin:0;
+    outline:none;
+   
+}
+.google-meet__sound{
+    width:45px;
+    height:45px;
+    background: white;
+    position:relative;
+}
+
+.google-meet__sound>input[type="checkbox"]{
+    visibility:hidden;
+}
+
+.google-meet__sound > label{
+    width: 45px;
+    height: 45px;
+    background-color: inherit;
+    background-image: url(quiet-2.png);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:8;
+}   
+
+.google-meet__sound input[type="checkbox"]:checked+label{
+    background-image: url(allow_speak.png);
+}
+
+.sbutton{
+    width:45px;
+    height:45px;
+}
+.sbutton:hover{
+    cursor:pointer;
+}
+.google-meet__hangup{
+    width:auto;
+}
+.google-meet__plus{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background-color:inherit;
+}
+.google-meet__information{
+    list-style: none;
+    width:250px;
+    height:100%;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+    padding:0;
+    top:2px;
+}
+.google-meet__information img{
+    height:50px;
+    width:auto;
+    cursor:pointer;
+}
+
+@media screen and (max-width:600px)
+{
+    .google-meet__me{
+        width:50%;
+    }
+    .google-meet__others{
+        width:50%;
+    }
+}
+@media screen and (max-width:400px)
+{
+    .google-meet__me-middle{
+        width:100px;
+        height:100px;
+    }
+    .google-meet__member-middle{
+        width:40px;
+        height:60px;
+    }
+}
+@media screen and (max-height:600px)
+{
+    .google-meet__me-middle{
+        width:100px;
+        height:100px;
+    }
+    .google-meet__member-middle{
+        width:40px;
+        height:40px;
+    }
+}
